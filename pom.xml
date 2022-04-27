@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>co.com.viveres.susy.microserviceuser</groupId>
-	<artifactId>microservice-user</artifactId>
+	<artifactId>tds-microservice-user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservice-user</name>
+	<name>tds-microservice-user</name>
 	<description>Microserviciopara la admin de usuarios</description>
 	<properties>
 		<java.version>11</java.version>
