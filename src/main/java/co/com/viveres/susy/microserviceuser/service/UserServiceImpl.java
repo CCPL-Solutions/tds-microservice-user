@@ -121,14 +121,13 @@ public class UserServiceImpl implements IUserService {
 		UserEntity userEntity = this.repository.findById(id)
 				.orElseThrow(() -> this.setGenericException("viveres-susy.usuarios.usuario-no-existe", String.valueOf(id)));
 		
+		userEntity.setId(id);
 		userEntity.setUsername(userDto.getUsername());
-		userEntity.setPassword(passwordEncoder.encode(userDto.getPassword()));
 		userEntity.setEnabled(userDto.getEnabled());
 		userEntity.setName(userDto.getName());
 		userEntity.setLastName(userDto.getLastName());
 		userEntity.setEmail(userDto.getEmail());
-		
-		this.mapInUserRoleDtoListToUserRoleEntityList(userDto.getRoles(), userEntity);
+		userEntity.setAttempts(userDto.getAttempts());
 		
 		this.repository.save(userEntity);
 	}
