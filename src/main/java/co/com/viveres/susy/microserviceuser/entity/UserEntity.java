@@ -23,12 +23,12 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @Setter
-@Table(name = "USERS")
+@Table(name = "\"USERS\"")
 public class UserEntity {
 
     @Id
-    @SequenceGenerator(name = "users_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_id_seq")
+    @SequenceGenerator(name = "\"SEQ_USER_ID\"", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "\"SEQ_USER_ID\"")
     @Column(name = "ID")
     private Long id;
 

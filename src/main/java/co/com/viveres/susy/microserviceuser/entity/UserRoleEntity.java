@@ -23,21 +23,21 @@ import javax.persistence.Table;
 @Getter
 @NoArgsConstructor
 @Setter
-@Table(name = "USERS_ROLES")
+@Table(name = "\"USERS_ROLES\"")
 public class UserRoleEntity {
 
     @Id
-    @SequenceGenerator(name = "users_roles_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_roles_id_seq")
+    @SequenceGenerator(name = "\"SEQ_USERS_ROLES_ID\"", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "\"SEQ_USERS_ROLES_ID\"")
     @Column(name = "ID")
     private Long id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ID_USER")
+    @JoinColumn(name = "ID_USER_FK")
     private UserEntity user;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ID_ROLE")
+    @JoinColumn(name = "ID_ROLE_FK")
     private RoleEntity role;
 
 }

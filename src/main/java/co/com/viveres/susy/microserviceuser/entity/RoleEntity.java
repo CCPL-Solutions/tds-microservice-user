@@ -20,7 +20,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @Setter
-@Table(name = "ROLES")
+@Table(name = "\"ROLES\"")
 public class RoleEntity {
 
     @Id
